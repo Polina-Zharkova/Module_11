@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="show-event-popup">
   @@include('blocks/head.html')
   <body class="body">
     @@include('blocks/page-header.html')
@@ -8,7 +8,7 @@
       <section class="about">
        <div class="about__container">
          <div class="about__block1"></div>
-         <div class="about__block2"
+         <div class="about__block2"></div>
             <picture class="about__picture">
              <img scr="assets/images/pic.jpg" class="about__img">
             </picture>
@@ -29,9 +29,10 @@
       </section>
 
       <!-- prettier-ignore -->
-       @@include('blocks/blog-listing.html, {"class": "home__listing"}')
+       @@include('blocks/blog-listing.html', {"class": "home__listing"})
        </div>
     </main>
-    @@include('blocks/page-footer.html')
+    <footer class="page-footer"></footer>
+    @@include('blocks/event-pp.html')
   </body>
 </html>
