@@ -8,6 +8,14 @@
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
+    @media @bw1340 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media @bw768 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 .show-event-popup {
@@ -15,9 +23,12 @@
         overflow: hidden;
     }
 
-    #eventPP {
+    #js-eventPP {
         display: flex;
     }
+}
+.pp-overflow {
+    overflow: hidden;
 }
 
 .is-hidden() {
@@ -33,4 +44,28 @@
   overflow: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+.show-nav {
+    body {
+        @media @bw1020 {
+            overflow: hidden;
+        }
+    }
+
+    .page-header__nav {
+        @media @bw1020 {
+            transform: translateX(0);
+        }
+    }
+
+    .page-header__nav-toggle {
+        &::before {
+            box-shadow: none;
+            transform: translate(0, 6px) rotate(45deg);
+        }
+        &::after {
+            transform: translate(0, -6px) rotate(-45deg);
+        }
+    }
 }

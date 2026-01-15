@@ -4,35 +4,50 @@
   <body class="body">
     @@include('blocks/page-header.html')
     <main class="main">
+      @@include('blocks/about.html')
       <div class="home">
-      <section class="about">
-       <div class="about__container">
-         <div class="about__block1"></div>
-         <div class="about__block2"></div>
-            <picture class="about__picture">
-             <img scr="assets/images/pic.jpg" class="about__img">
-            </picture>
-            <h3 class="about__title">
-             Мы представляем площади для вашего мероприятия
-            </h3>
-            <picture class="about__picture2">
-             <img scr="assets/images/pic2.jpg" class="about__img">
-            </picture>
-           <p class="about text">
-            И оказываем помощь с организацией, если вам это нужно.
-            Наша цель: вовлечь в культурную жизнь города как можно больше людей, 
-            помочь молодым ребятам сделать первые шаги к своей мечте 
-            и рассказать всем о том, что их волнует.
-           </p>
+        <header class="main-header home__main-header">
+        <h1 class="main-header__title">Арт-пространство</h1>
+
+        <div class="main-header__logo logo">
+          <div class="logo__wrapper">
+            <svg class="logo__icon" width="1920" height="325">
+              <use xlink:href="assets/icons/symbols.svg#logo_big"></use>
+            </svg>
           </div>
         </div>
-      </section>
+
+      <p class="main-header__description">
+        для людей, горящих сердец&nbsp;и&nbsp;делом
+      <br />
+      место для настоящего
+      </p>
+        </header>
 
       <!-- prettier-ignore -->
+       @@include('blocks/offers.html', {"class": "home__offers"})
+      <!-- prettier-ignore -->
+       @@include('blocks/about.html', {"class": "home__about"})
+      <!-- prettier-ignore -->
+       @@include('blocks/upcoming.html', {"class": "home__upcoming"})
+
+
+       <!-- prettier-ignore -->
        @@include('blocks/blog-listing.html', {"class": "home__listing"})
+      <!-- prettier-ignore -->
+       @@include('blocks/contacts.html', {"class": "home__contacts"})
+      <!-- prettier-ignore -->
+       @@include('blocks/doit.html', {"class": "home__doit"})
        </div>
     </main>
-    <footer class="page-footer"></footer>
-    @@include('blocks/event-pp.html')
+
+    @@include('blocks/page-footer.html') @@include('blocks/event-pp.html')
+
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key="
+    ></script>
+
+    <script scr="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

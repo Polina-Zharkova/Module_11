@@ -1,10 +1,10 @@
-html,body {
+.html,body {
   width: 100%; 
   margin: 0;
   padding: 0;
 }
 
-body {
+.body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,12 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+  @media @bw768 {
+    padding-top: 70px;
+  }
 }
 
 .main {
@@ -32,7 +38,7 @@ body {
   flex: 0 0 auto;
 }
 
-input,
+.input,
 textarea,
 select {
   box-shadow: none;
@@ -41,29 +47,30 @@ select {
   font-family: @font1;
 }
 
-textarea {
+.textarea {
   resize: none;
 }
 
-input,
+.input,
 textarea {
   &::placeholder {
     color: @gray;
   }
 }
 
-input:focus,
+.input:focus,
 textarea:focus {
   &::placeholder {
     color: transparent;
 }
+}
 
-a {
+.a {
   color: @black;
   outline: none;
 }
 
-img {
+.img {
   max-width: 100%;
   height: auto;
   object-fit: cover;

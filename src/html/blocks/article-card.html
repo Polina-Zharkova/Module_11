@@ -1,6 +1,16 @@
 <artile class="article-card @@class">
     <a href="#" class="article-card__link">
         <picture class="article-card__picture">
+
+            <sourse @media="(max-width: 450px)" type="image/webp" srcset="@@img_webp"/>
+
+            <sourse @media="(max-width: 450px)" srcset="@@img"/>
+
+            <sourse @media="(max-width: 1169px)" type="image/webp" srcset="@@img_tablet_webp"/>
+
+            <source @media="(max-width: 1169px)" srcset="@@img_tablet"/>
+
+            <sourse type="image/webp" srcset="@@img_webp" />
             <img scr="@@img" alt="@alt" class="article-card__img"/>
         </picture>
     </a>

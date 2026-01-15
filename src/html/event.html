@@ -1,4 +1,10 @@
-<form class="reserve">
+<!DOCTYPE html>
+<html lang="ru">
+  <body class="body">
+    <main class="main">
+      <article class="event">
+        <div class="event__container">
+          <form class="reserve">
   <div class="reserve__checks">
     <h4 class="reserve__section-title">
       Забронировать столик
@@ -386,4 +392,18 @@
     </button>
   </div>
   </div>
-</form>  
+</form>
+
+
+        <!-- prettier-ignore -->
+         @@include('blocks/reserve.html', {"class": "event__reserver"})
+        </div>
+      </article>
+    </main>
+
+    @@include('blocks/page-footer.html')
+
+    <script src="scripts/main.min.js"></script>
+  </body>
+
+</html>
